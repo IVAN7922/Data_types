@@ -8,6 +8,7 @@ function getPerfectPartner($surname, $name, $patronomyc, $array)
     $i = 0;
     $result = 'Пару подобрать невозможно!';
     
+// в случае отсутвия совпадений М и Ж, и если пол определить невозможно - цикл делает 100 проходов и выдает отрицательный результат
     for ($i = 0; $i < 100; $i ++) {
         $a = rand(0, count($array) - 1);
         $secondMen = $array[$a]['fullname'];
